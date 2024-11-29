@@ -1,6 +1,6 @@
-package com.task_management.controller;
+package com.task_management.controllers;
 
-import com.task_management.constant.ResponseMessage;
+import com.task_management.constants.ResponseMessage;
 import com.task_management.utils.ResponseDto;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
