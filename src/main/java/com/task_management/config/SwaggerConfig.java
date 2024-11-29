@@ -5,6 +5,7 @@ import io.swagger.v3.oas.models.OpenAPI;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import io.swagger.v3.oas.models.security.SecurityScheme;
 
 @Configuration
 public class SwaggerConfig {
@@ -14,10 +15,10 @@ public class SwaggerConfig {
         Server server;
         return new OpenAPI()
                 .components(new io.swagger.v3.oas.models.Components().securitySchemes(
-                        new java.util.HashMap<String, io.swagger.v3.oas.models.security.SecurityScheme>() {
+                        new java.util.HashMap<String, SecurityScheme>() {
                             {
-                                put("bearer-key", new io.swagger.v3.oas.models.security.SecurityScheme()
-                                        .type(io.swagger.v3.oas.models.security.SecurityScheme.Type.HTTP)
+                                put("bearer-key", new SecurityScheme()
+                                        .type(SecurityScheme.Type.HTTP)
                                         .scheme("bearer")
                                         .bearerFormat("JWT"));
                             }
