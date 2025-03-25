@@ -1,12 +1,14 @@
 package com.task_management.repositories;
 
 import com.task_management.models.User;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-public interface UserRepository extends JpaRepository<User, UUID> {
-    User findByEmail(String email);
 
-    User findByEmailExists(String email);
+public interface UserRepository extends JpaRepository<User, UUID> {
+//    User findByEmail(String email);
+//
+//    User findByEmailExists(String email);
 }

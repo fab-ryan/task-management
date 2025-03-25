@@ -15,13 +15,13 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public User findByEmail(String email) {
-        return userRepository.findByEmail(email);
-    }
+//    public User findByEmail(String email) {
+//        return userRepository.findByEmail(email);
+//    }
 
-    public User findByEmailExists(String email) {
-        return userRepository.findByEmailExists(email);
-    }
+//    public User findByEmailExists(String email) {
+//        return userRepository.findByEmailExists(email);
+//    }
 
     public User registerUser(User user) {
         String hashedPassword = passwordEncoder.encode(user.getPassword());
